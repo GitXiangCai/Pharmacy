@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>协和药学题库刷题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-text">协和药学349初试真题</span>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <section class="controls" aria-label="筛选条件">
+          <div class="control-group">
+            <span class="control-label">年份：</span>
+            <div class="chip-group" id="year-chips">
+              <!-- 年份选项由 JS 注入 -->
+            </div>
+          </div>
+          <div class="control-group">
+            <span class="control-label">题型：</span>
+            <div class="chip-group" id="type-chips">
+              <!-- 题型选项由 JS 注入 -->
+            </div>
+          </div>
+          <button id="random-all-btn" class="chip random-float-btn" type="button">
+            全部随机
+          </button>
+        </section>
+
+        <section class="cards-section" aria-live="polite">
+          <div id="cards-container" class="cards-grid">
+            <!-- 卡片由 JS 渲染 -->
+          </div>
+          <div class="empty-state" id="empty-state" hidden>
+            暂无符合条件的题目。
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <div class="footer-left">
+          <span id="status-text" class="status-text">加载中…</span>
+        </div>
+        <div class="footer-actions">
+          <button id="prev-page-btn" class="primary-btn" type="button">
+            上一页
+          </button>
+          <button id="next-page-btn" class="primary-btn" type="button">
+            下一页
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <aside class="corner-brand" aria-label="署名">
+      <img class="corner-brand-img" src="./02-icon.jpg" alt="英森蘑菇" />
+      <div class="corner-brand-text">英森蘑菇</div>
+    </aside>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
